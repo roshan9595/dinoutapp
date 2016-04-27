@@ -1,5 +1,6 @@
 package com.example.rosh.dineout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -45,14 +46,17 @@ public class contentlist extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        switch (item.getItemId()) {
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+            case R.id.sort:
+                startActivity(new Intent(this,sorting.class));
+                return true;
+
+            //noinspection SimplifiableIfStatement
+
         }
+            return super.onOptionsItemSelected(item);
 
-        return super.onOptionsItemSelected(item);
     }
 
 

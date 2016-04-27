@@ -10,13 +10,10 @@
     android:fitsSystemWindows="true"
 
     android:fillViewport="false"
-android:background="#C60C30"
+android:background="#ffa64d"
 tools:context="com.example.rosh.dineout.contentlist"
      >
-    <item xmlns:app="http://schemas.android.com/apk/res-auto"
 
-        andr
-              />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/cardList"

@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:fitsSystemWindows="true"
-    android:background="#C60C30"
+    android:background="#ffffff"
     tools:context="com.example.rosh.dineout.Signup">
 
     <LinearLayout
@@ -16,11 +16,21 @@
         android:paddingRight="24dp">
 
         <ImageView
-            android:src="@drawable/logo"
+            android:src="@drawable/dineout"
             android:layout_width="wrap_content"
             android:layout_height="72dp"
             android:layout_marginBottom="24dp"
             android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:text="DineOut"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:textSize="50dp"
+            android:textColor="#ffa64d"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal" />
+
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"

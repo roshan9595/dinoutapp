@@ -5,21 +5,28 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
+
+
+
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/dineout"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name=".Signup"
             android:label="@string/title_activity_signup"
-            android:theme="@style/AppTheme.NoActionBar" >
+
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+          >
         </activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" >
+
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+           >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,6 +40,10 @@
         <activity
             android:name=".card_layout"
             android:label="@string/title_activity_card_layout" >
+        </activity>
+        <activity
+            android:name=".sorting"
+            android:label="@string/title_activity_sorting" >
         </activity>
     </application>
 
