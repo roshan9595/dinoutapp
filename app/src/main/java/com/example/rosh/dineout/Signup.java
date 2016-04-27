@@ -20,7 +20,7 @@ public class Signup extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent("com.example.rosh.myapplication.Mainmenu");
+                        Intent intent = new Intent(Signup.this,contentlist.class);
                         startActivity(intent);
                     }
                 }
