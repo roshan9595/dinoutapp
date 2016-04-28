@@ -12,22 +12,22 @@ import java.util.List;
  * Created by Aswin Rk on 4/26/2016.
  */
 
-public class MyAdapter extends RecyclerView.Adapter< MyAdapter.ContactViewHolder> {
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ContactViewHolder> {
 
+    private List<ContactInfo> contactList;
 
-        private List<ContactInfo> contactList;
-
-        public MyAdapter(List < ContactInfo > contactList) {
+    public MyAdapter(List<ContactInfo> contactList) {
         this.contactList = contactList;
     }
 
-        @Override
-        public int getItemCount () {
+
+    @Override
+    public int getItemCount() {
         return contactList.size();
     }
 
-        @Override
-        public void onBindViewHolder (ContactViewHolder contactViewHolder,int i){
+    @Override
+    public void onBindViewHolder(ContactViewHolder contactViewHolder, int i) {
         ContactInfo ci = contactList.get(i);
         contactViewHolder.vName.setText(ci.name);
         contactViewHolder.vSurname.setText(ci.surname);
@@ -35,8 +35,8 @@ public class MyAdapter extends RecyclerView.Adapter< MyAdapter.ContactViewHolder
         contactViewHolder.vTitle.setText(ci.name + " " + ci.surname);
     }
 
-        @Override
-        public ContactViewHolder onCreateViewHolder (ViewGroup viewGroup,int i){
+    @Override
+    public ContactViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View itemView = LayoutInflater.
                 from(viewGroup.getContext()).
                 inflate(R.layout.activity_card_layout, viewGroup, false);
@@ -44,20 +44,19 @@ public class MyAdapter extends RecyclerView.Adapter< MyAdapter.ContactViewHolder
         return new ContactViewHolder(itemView);
     }
 
-        public static class ContactViewHolder extends RecyclerView.ViewHolder {
-            protected TextView vName;
-            protected TextView vSurname;
-            protected TextView vEmail;
-            protected TextView vTitle;
+    public static class ContactViewHolder extends RecyclerView.ViewHolder {
 
-            public ContactViewHolder(View v) {
-                super(v);
-                vName = (TextView) v.findViewById(R.id.txtName);
-                vSurname = (TextView) v.findViewById(R.id.txtSurname);
-                vEmail = (TextView) v.findViewById(R.id.txtEmail);
-                vTitle = (TextView) v.findViewById(R.id.title);
-            }
+        protected TextView vName;
+        protected TextView vSurname;
+        protected TextView vEmail;
+        protected TextView vTitle;
+
+        public ContactViewHolder(View v) {
+            super(v);
+            vName =  (TextView) v.findViewById(R.id.txtName);
+            vSurname = (TextView)  v.findViewById(R.id.txtSurname);
+            vEmail = (TextView)  v.findViewById(R.id.txtEmail);
+            vTitle = (TextView) v.findViewById(R.id.title);
         }
-
-
+    }
 }

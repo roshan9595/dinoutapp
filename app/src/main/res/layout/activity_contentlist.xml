@@ -10,7 +10,7 @@
     android:fitsSystemWindows="true"
 
     android:fillViewport="false"
-android:background="#ffa64d"
+android:background="#ffffff"
 tools:context="com.example.rosh.dineout.contentlist"
      >
 
@@ -21,6 +21,7 @@ tools:context="com.example.rosh.dineout.contentlist"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:padding="8dp"
+
 
 
         />

@@ -9,4 +9,5 @@
 
     <string name="title_activity_card_layout">card_layout</string>
     <string name="title_activity_sorting">sorting</string>
+    <string name="title_activity_landingpage">landingpage</string>
 </resources>

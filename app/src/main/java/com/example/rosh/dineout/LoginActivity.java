@@ -136,4 +136,73 @@ public class LoginActivity extends AppCompatActivity {
 
         return valid;
     }
+ /*  public class StoreUserDataAsyncTask extends AsyncTask<Void, Void, String[]> {
+
+
+
+        public StoreUserDataAsyncTask(String str){
+
+        }
+
+        @Override
+        protected String[] doInBackground(Void... params) {
+            String name[]={"a","b"};
+            ArrayList<NameValuePair> dataToSend = new ArrayList<>();
+            dataToSend.add(new BasicNameValuePair("photo", user.pic));
+            dataToSend.add(new BasicNameValuePair("name", user.name));
+            dataToSend.add(new BasicNameValuePair("email", user.email));
+            dataToSend.add(new BasicNameValuePair("password", user.password));
+            dataToSend.add(new BasicNameValuePair("phno", user.phno));
+            dataToSend.add(new BasicNameValuePair("dp", user.pic));
+
+            HttpParams httpRequestParams = getHttpRequestParams();
+
+            HttpClient client = new DefaultHttpClient(httpRequestParams);
+            HttpPost post = new HttpPost(SERVER_ADDRESS
+                    + "Register.php");
+
+            try {
+                post.setEntity(new UrlEncodedFormEntity(dataToSend));
+                HttpResponse httpResponse=client.execute(post);
+                HttpEntity entity = httpResponse.getEntity();
+                String result = EntityUtils.toString(entity);
+                Log.v("Test",result);
+                JSONObject jObject = new JSONObject(result);
+
+                if (jObject.length() != 0){
+                    {
+                        //     Toast.makeText(context, "Registeration Sucessfull. Your ID is " , Toast.LENGTH_SHORT).show();
+                        Log.v("happened", "2");
+                        name[0]= jObject.getString("status");
+                        if(name[0].equals("1"))
+                            name[1]=jObject.getString("user_id");
+
+
+
+
+                    }}
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            return name;
+        }
+
+        private HttpParams getHttpRequestParams() {
+            HttpParams httpRequestParams = new BasicHttpParams();
+            HttpConnectionParams.setConnectionTimeout(httpRequestParams,
+                    CONNECTION_TIMEOUT);
+            HttpConnectionParams.setSoTimeout(httpRequestParams,
+                    CONNECTION_TIMEOUT);
+            return httpRequestParams;
+        }
+
+        @Override
+        protected void onPostExecute(String[] result) {
+            super.onPostExecute(result);
+            progressDialog.dismiss();
+            userCallBack.done(result);
+        }
+
+    }*/
 }
